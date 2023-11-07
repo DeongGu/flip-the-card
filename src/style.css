@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 html,
 body,
 div,
@@ -130,5 +132,86 @@ table {
 .title {
   text-align: center;
   font-size: 40px;
+  margin: 40px auto;
+}
+
+.main {
+  display: grid;
+  max-width: 1024px;
+  gap: 10px;
   margin: 0 auto;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 20em;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 10px;
+
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cardWrapper:hover {
+  transform: rotateY(180deg);
+}
+
+.card_image {
+  width: 50%;
+  background-size: cover;
+}
+
+.card_front,
+.card_back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.card_front {
+  background-color: rgba(140, 211, 211);
+}
+
+.card_back {
+  background-color: rgb(192, 133, 24);
+  transform: rotateY(180deg);
+}
+
+/* PC (해상도 1024px)*/
+@media all and (min-width: 1024px) {
+  .main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .cardWrapper {
+    width: 80%;
+  }
+}
+
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cardWrapper {
+    width: 60%;
+  }
+}
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
+@media all and (max-width: 767px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }

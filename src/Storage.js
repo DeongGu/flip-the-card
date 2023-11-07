@@ -7,4 +7,6 @@ export const setQuotes = async () => {
   }
 
   console.log(JSON.parse(localStorage.getItem("quotes")));
+
+  return data;
 };

@@ -1,6 +1,5 @@
 import Header from "./Header.js";
 import Main from "./Main.js";
-import { setQuotes } from "./Storage.js";
 
 export default class App {
   constructor($target) {
@@ -14,7 +13,5 @@ export default class App {
 
     const main = new Main(this.$target);
     main.render();
-
-    await setQuotes();
   }
 }

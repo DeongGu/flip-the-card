@@ -13,7 +13,7 @@ export default class Main {
     const data = await setQuotes();
 
     for (let i = 0; i < data.length; i++) {
-      const card = new Card(main);
+      const card = new Card(main, i, data[i]);
       card.render();
     }
 

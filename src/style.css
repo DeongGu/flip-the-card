@@ -156,7 +156,7 @@ table {
   transition: transform 0.5s;
 }
 
-.cardWrapper:hover .card {
+.card.flipped {
   transform: rotateY(180deg);
 }
 
@@ -170,6 +170,7 @@ table {
   height: 100%;
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .card_front {
@@ -180,7 +181,7 @@ table {
 }
 
 .card_back {
-  background-color: rgb(192, 133, 24);
+  background-color: rgba(0, 0, 0, 0.1);
   transform: rotateY(180deg);
   display: flex;
   justify-content: center;

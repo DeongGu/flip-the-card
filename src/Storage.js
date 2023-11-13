@@ -6,7 +6,5 @@ export const setQuotes = async () => {
     localStorage.setItem("quotes", JSON.stringify(data));
   }
 
-  console.log(JSON.parse(localStorage.getItem("quotes")));
-
   return data;
 };

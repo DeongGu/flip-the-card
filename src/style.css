@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "KCCChassam";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body,
 div,
@@ -86,6 +94,7 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: KCCChassam;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -131,7 +140,6 @@ table {
 
 .title {
   text-align: center;
-  font-size: 40px;
   margin: 40px auto;
 }
 
@@ -186,12 +194,26 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.back_title,
+.back_contents {
+  padding: 10px;
+}
+
+.back_title {
+  font-weight: bold;
 }
 
 /* PC (해상도 1024px)*/
 @media all and (min-width: 1024px) {
   .main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .title {
+    font-size: 5rem;
   }
 
   .cardWrapper {
@@ -205,6 +227,10 @@ table {
     grid-template-columns: 1fr 1fr;
   }
 
+  .title {
+    font-size: 4rem;
+  }
+
   .cardWrapper {
     width: 60%;
   }
@@ -214,5 +240,9 @@ table {
 @media all and (max-width: 767px) {
   .main {
     grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
   }
 }

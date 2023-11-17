@@ -1,4 +1,5 @@
 import Header from "./Header.js";
+import ShuffleBtn from "./ShuffleBtn.js";
 import Main from "./Main.js";
 
 export default class App {
@@ -10,6 +11,9 @@ export default class App {
   async render() {
     const header = new Header(this.$target);
     header.render();
+
+    const shuffleBtn = new ShuffleBtn(this.$target);
+    shuffleBtn.render();
 
     const main = new Main(this.$target);
     main.render();

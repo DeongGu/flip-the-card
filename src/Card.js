@@ -18,7 +18,7 @@ export default class Card {
     card.appendChild(front);
 
     const img = document.createElement("img");
-    img.setAttribute("class", "card_image");
+    img.setAttribute("class", "image");
     img.src = "./public/icon.png";
     front.appendChild(img);
 

@@ -3,22 +3,28 @@ export default class Header {
     this.$target = $target;
   }
 
-  createElement(element, css, text) {
-    const elem = document.createElement(element);
+  /**
+   *
+   * @param {DOMElement} element
+   * @param {className} css
+   * @param {Text} text
+   * @returns DOMElement
+   */
+  createElement(element, css, text = "") {
+    const $elem = document.createElement(element);
     const textElement = document.createTextNode(text);
 
-    elem.setAttribute("class", css);
-    elem.appendChild(textElement);
+    $elem.setAttribute("class", css);
+    $elem.appendChild(textElement);
 
-    return elem;
+    return $elem;
   }
 
   render() {
-    const header = document.createElement("header");
-    header.setAttribute("class", "header");
+    const $header = this.createElement("header", "header");
 
-    const title = this.createElement("h1", "title", "명언 카드 뒤집기");
-    header.appendChild(title);
-    this.$target.appendChild(header);
+    const $title = this.createElement("h1", "title", "명언 카드 뒤집기");
+    $header.appendChild($title);
+    this.$target.appendChild($header);
   }
 }

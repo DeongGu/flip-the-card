@@ -9,13 +9,13 @@ export default class App {
   }
 
   async render() {
-    const header = new Header(this.$target);
-    header.render();
+    const $header = new Header(this.$target);
+    $header.render();
 
-    const shuffleBtn = new ShuffleBtn(this.$target);
-    shuffleBtn.render();
+    const $shuffleBtn = new ShuffleBtn(this.$target);
+    $shuffleBtn.render();
 
-    const main = new Main(this.$target);
-    main.render();
+    const $main = new Main(this.$target);
+    $main.render();
   }
 }

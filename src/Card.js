@@ -5,33 +5,43 @@ export default class Card {
     this.data = data;
   }
 
-  render() {
-    const cardWrapper = document.createElement("div");
-    cardWrapper.setAttribute("class", "cardWrapper");
+  /**
+   *
+   * @param {DOMElement} element
+   * @param {className} css
+   * @param {Text} text
+   * @returns DOMElement
+   */
+  createElement(element, css, text = "") {
+    const $elem = document.createElement(element);
+    const $textElement = document.createTextNode(text);
 
-    const card = document.createElement("div");
-    card.setAttribute("class", "card");
+    $elem.setAttribute("class", css);
+    $elem.appendChild($textElement);
+
+    return $elem;
+  }
+
+  render() {
+    const cardWrapper = this.createElement("div", "card_wrapper");
+
+    const card = this.createElement("div", "card");
     cardWrapper.appendChild(card);
 
-    const front = document.createElement("div");
-    front.setAttribute("class", "card_front");
+    const front = this.createElement("div", "card_front");
     card.appendChild(front);
 
-    const img = document.createElement("img");
-    img.setAttribute("class", "image");
+    const img = this.createElement("img", "image");
     img.src = "./public/icon.png";
     front.appendChild(img);
 
-    const back = document.createElement("div");
-    back.setAttribute("class", "card_back");
+    const back = this.createElement("div", "card_back");
 
-    const backTitle = document.createElement("div");
-    backTitle.setAttribute("class", "back_title");
+    const backTitle = this.createElement("div", "back_title");
     backTitle.innerHTML = this.data.writer;
     back.appendChild(backTitle);
 
-    const backContents = document.createElement("div");
-    backContents.setAttribute("class", "back_contents");
+    const backContents = this.createElement("div", "back_contents");
     backContents.innerHTML = this.data.contents;
     back.appendChild(backContents);
 

@@ -152,15 +152,11 @@ table {
   position: relative;
 }
 
-.cardWrapper {
+.card_wrapper {
   width: 50%;
   height: 20em;
   margin: 0 auto;
   perspective: 1000px;
-}
-
-.shuffle {
-  animation: shuffle 2s ease infinite alternate;
 }
 
 .card {
@@ -230,7 +226,7 @@ table {
     font-size: 5rem;
   }
 
-  .cardWrapper {
+  .card_wrapper {
     width: 80%;
   }
 }
@@ -245,7 +241,7 @@ table {
     font-size: 4rem;
   }
 
-  .cardWrapper {
+  .card_wrapper {
     width: 60%;
   }
 }

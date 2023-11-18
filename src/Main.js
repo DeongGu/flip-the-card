@@ -5,9 +5,25 @@ export default class Main {
     this.$target = $target;
   }
 
+  /**
+   *
+   * @param {DOMElement} element
+   * @param {className} css
+   * @param {Text} text
+   * @returns DOMElement
+   */
+  createElement(element, css, text = "") {
+    const $elem = document.createElement(element);
+    const textElement = document.createTextNode(text);
+
+    $elem.setAttribute("class", css);
+    $elem.appendChild(textElement);
+
+    return $elem;
+  }
+
   async render() {
-    const main = document.createElement("main");
-    main.setAttribute("class", "main");
+    const main = this.createElement("main", "main");
 
     //카드 개수에 따른 render
     const data = await setQuotes();

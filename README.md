@@ -34,4 +34,14 @@ npm run start
   - JavaScript
 
 ## 프로젝트 결과물
-- 
+- 카드 뒤집기 (card flip)
+  ![flip](https://github.com/DeongGu/flip-the-card/assets/95382684/8defca45-b5c2-4423-808a-1fcb4551784d)
+
+- 카드 셔플 (card shuffle)
+ ![shuffle](https://github.com/DeongGu/flip-the-card/assets/95382684/e26019ff-8138-4b4a-b72f-576110c2b4b5)
+
+- 반응형 페이지 (responsive page)
+  ![responsive](https://github.com/DeongGu/flip-the-card/assets/95382684/d1aae050-8970-46ce-8614-de3ff8415d19)
+
+## 라이센스
+- 폰트 - 한국저작권위원회/KCC차쌤체/눈누(https://noonnu.cc/)
